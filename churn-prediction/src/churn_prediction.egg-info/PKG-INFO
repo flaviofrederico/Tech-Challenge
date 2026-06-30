@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: churn-prediction
+Version: 1.0.0
+Summary: Pipeline ML end-to-end para previsão de churn de clientes (Telco), com MLP em PyTorch, baselines em Scikit-Learn, tracking em MLflow e API de inferência em FastAPI.
+Author: Grupo Tech Challenge - Fase 1
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: torch>=2.2
+Requires-Dist: scikit-learn>=1.4
+Requires-Dist: pandas>=2.1
+Requires-Dist: numpy>=1.26
+Requires-Dist: mlflow>=2.10
+Requires-Dist: fastapi>=0.110
+Requires-Dist: uvicorn[standard]>=0.27
+Requires-Dist: pydantic>=2.6
+Requires-Dist: pandera>=0.18
+Requires-Dist: joblib>=1.3
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.1; extra == "dev"
+Requires-Dist: httpx>=0.27; extra == "dev"
+Requires-Dist: ruff>=0.3; extra == "dev"
