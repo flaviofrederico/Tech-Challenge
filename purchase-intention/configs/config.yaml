@@ -1,0 +1,15 @@
+data:
+  raw_path: "data/raw/online_shoppers_intention.csv"
+  processed_path: "data/processed"
+  test_size: 0.2
+  random_state: 42
+
+model:
+  name: "purchase_intention_classifier"
+  random_state: 42
+  n_estimators: 300
+  max_depth: 12
+
+mlflow:
+  experiment_name: "purchase_intention"
+  tracking_uri: "mlruns"
