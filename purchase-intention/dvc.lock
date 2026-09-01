@@ -6,8 +6,8 @@ stages:
     deps:
     - path: configs/config.yaml
       hash: md5
-      md5: dcbc8493d7891390f3f3fbcb40342114
-      size: 320
+      md5: 6e01d797c3cc5f6680844dcf83675b3c
+      size: 333
     - path: data/raw/online_shoppers_intention.csv
       hash: md5
       md5: cc6ec1db03b4f10f8de52c56ff48b085
@@ -25,3 +25,32 @@ stages:
       hash: md5
       md5: aad39ccafa885f5c4fb248f78c31ee11
       size: 1159694
+  train:
+    cmd: python -m purchase_intention.pipeline.train --config 
+      configs/config.yaml
+    deps:
+    - path: configs/config.yaml
+      hash: md5
+      md5: 6e01d797c3cc5f6680844dcf83675b3c
+      size: 333
+    - path: data/processed/dataset.csv
+      hash: md5
+      md5: aad39ccafa885f5c4fb248f78c31ee11
+      size: 1159694
+    - path: src/purchase_intention/features/preprocessing.py
+      hash: md5
+      md5: 7949bf802540f50ff1a9fe1e3881e648
+      size: 2038
+    - path: src/purchase_intention/models/train.py
+      hash: md5
+      md5: 82f9a4c693c2108994540f56147bdf76
+      size: 3069
+    - path: src/purchase_intention/pipeline/train.py
+      hash: md5
+      md5: 06c6dd73a2685c030ec03fa3bfb0152a
+      size: 3045
+    outs:
+    - path: metrics.json
+      hash: md5
+      md5: 42305c9e5cb8cfecda57a60f97f430f1
+      size: 175
