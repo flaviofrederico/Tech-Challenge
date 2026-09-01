@@ -1,0 +1,22 @@
+stages:
+  preprocess:
+    cmd: python -m purchase_intention.pipeline.preprocess --config configs/config.yaml
+    deps:
+      - src/purchase_intention/pipeline/preprocess.py
+      - src/purchase_intention/data/loader.py
+      - data/raw/online_shoppers_intention.csv
+      - configs/config.yaml
+    outs:
+      - data/processed/dataset.csv
+
+  train:
+    cmd: python -m purchase_intention.pipeline.train --config configs/config.yaml
+    deps:
+      - src/purchase_intention/pipeline/train.py
+      - src/purchase_intention/features/preprocessing.py
+      - src/purchase_intention/models/train.py
+      - data/processed/dataset.csv
+      - configs/config.yaml
+    metrics:
+      - metrics.json:
+          cache: false

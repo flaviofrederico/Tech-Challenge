@@ -1,0 +1,27 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: python -m purchase_intention.pipeline.preprocess --config 
+      configs/config.yaml
+    deps:
+    - path: configs/config.yaml
+      hash: md5
+      md5: dcbc8493d7891390f3f3fbcb40342114
+      size: 320
+    - path: data/raw/online_shoppers_intention.csv
+      hash: md5
+      md5: cc6ec1db03b4f10f8de52c56ff48b085
+      size: 1072063
+    - path: src/purchase_intention/data/loader.py
+      hash: md5
+      md5: 24929e0ef681ebf6d31fc8ce87df06cf
+      size: 995
+    - path: src/purchase_intention/pipeline/preprocess.py
+      hash: md5
+      md5: b7a23368c1900e4ae0d7cd4abde17d9d
+      size: 1582
+    outs:
+    - path: data/processed/dataset.csv
+      hash: md5
+      md5: aad39ccafa885f5c4fb248f78c31ee11
+      size: 1159694
