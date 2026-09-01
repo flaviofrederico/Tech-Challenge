@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "purchase-intention"
+version = "0.1.0"
+description = "Pipeline de Machine Learning para prever propensao de compra em e-commerce, com Docker, DVC e MLflow."
+authors = ["Flavio Frederico <eng.flaviofrederico@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "purchase_intention", from = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+pandas = "^2.2.0"
+scikit-learn = "^1.5.0"
+mlflow = "^2.16.0"
+pyyaml = "^6.0.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.0"
+ruff = "^0.6.0"
+dvc = "^3.55.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
