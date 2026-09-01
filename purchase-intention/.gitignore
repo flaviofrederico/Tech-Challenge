@@ -10,8 +10,13 @@ venv/
 /data/processed/*
 !/data/raw/.gitkeep
 !/data/processed/.gitkeep
+!/data/raw/*.dvc
+!/data/processed/*.dvc
+!/data/raw/.gitignore
+!/data/processed/.gitignore
 /models/*
 !/models/.gitkeep
+!/models/*.dvc
 mlruns/
 mlflow.db
 
