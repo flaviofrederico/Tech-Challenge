@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+mlruns/
+models/*
+!models/.gitkeep
+.git/
+.dvc/
+tests/
+.env
