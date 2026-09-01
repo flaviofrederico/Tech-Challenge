@@ -12,4 +12,4 @@ model:
 
 mlflow:
   experiment_name: "purchase_intention"
-  tracking_uri: "mlruns"
+  tracking_uri: "sqlite:///mlflow.db"
