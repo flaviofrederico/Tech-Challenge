@@ -47,8 +47,8 @@ stages:
       size: 3069
     - path: src/purchase_intention/pipeline/train.py
       hash: md5
-      md5: 06c6dd73a2685c030ec03fa3bfb0152a
-      size: 3045
+      md5: d80b8d3e50508b48786de01bee3730c3
+      size: 3036
     outs:
     - path: metrics.json
       hash: md5
