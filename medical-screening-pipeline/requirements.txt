@@ -7,3 +7,4 @@ prometheus-client==0.20.0
 pytest==8.1.1
 httpx==0.27.0
 onnxruntime==1.17.1
+skl2onnx==1.16.0
